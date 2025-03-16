@@ -4,8 +4,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const DBConnection = async () => {
-    const USERNAME = process.env.DB_USERNAME;
-    const PASSWORD = process.env.DB_PASSWORD;
 
     const MONGO_URI = process.env.MONGODB_URL;
     try {
