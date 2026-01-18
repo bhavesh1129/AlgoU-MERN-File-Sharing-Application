@@ -1,4 +1,4 @@
-import File from '../models/file.js';
+import File from '../models/File.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -7,7 +7,7 @@ dotenv.config();
  * Handles file upload requests
  * Creates a new file record in the database and returns a download link
  */
-export const uploadImage = async (request, response) => {
+export const uploadFile = async (request, response) => {
     // Check if file was uploaded
     if (!request.file) {
         return response.status(400).json({ error: 'No file uploaded' });
@@ -38,7 +38,7 @@ export const uploadImage = async (request, response) => {
  * Handles file download requests
  * Increments download count and serves the file
  */
-export const getImage = async (request, response) => {
+export const getFile = async (request, response) => {
     try {   
         // Find file by ID from URL parameters
         const file = await File.findById(request.params.fileId);
@@ -59,3 +59,4 @@ export const getImage = async (request, response) => {
         response.status(500).json({ msg: error.message });
     }
 }
+
