@@ -13,7 +13,7 @@ A modern MERN stack application for secure file upload and sharing. Users can up
 ## Tech Stack
 
 **Frontend:**
-- React 18
+- React 18 with Vite
 - Axios for API calls
 - CSS3 for styling
 
@@ -84,7 +84,7 @@ The server will start on `http://localhost:8000`
 ```bash
 # From client directory (in a new terminal)
 cd client
-npm start
+npm run dev
 ```
 The React app will start on `http://localhost:3000`
 
@@ -106,11 +106,14 @@ The React app will start on `http://localhost:3000`
 
 ```
 AlgoU-MERN-File-Sharing-Application/
-├── client/                 # React frontend
+├── client/                 # React frontend (Vite)
 │   ├── src/
 │   │   ├── service/       # API service functions
-│   │   ├── App.js         # Main React component
+│   │   ├── App.jsx        # Main React component
+│   │   ├── main.jsx       # Entry point
 │   │   └── App.css        # Styling
+│   ├── index.html         # HTML template
+│   ├── vite.config.js     # Vite configuration
 │   └── package.json
 ├── server/                # Node.js backend
 │   ├── controller/        # Route controllers
@@ -135,6 +138,7 @@ AlgoU-MERN-File-Sharing-Application/
 
 ### Frontend Dependencies
 - react: UI library
+- vite: Next-gen frontend tooling
 - axios: HTTP client for API calls
 
 ## Environment Variables
